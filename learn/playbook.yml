@@ -74,3 +74,9 @@
 
   - name: install laravel/valet
     command: valet install
+
+  - name: create projects folder
+    shell: mkdir -p ~/projects
+
+  - name: setup valet park on projects folder
+    shell: cd ~/projects && valet park

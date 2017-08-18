@@ -183,3 +183,19 @@ Note: run homebrew_tap before homebrew because "php71" comes from the "homebrew-
   - name: install laravel/valet
     command: valet install
 ```
+
+#### Step 12 - Setup laravel valet
+
+Create a projects folder:
+
+```
+  - name: create projects folder
+    shell: mkdir -p ~/projects
+```
+
+Let laravel valet monitor this folder:
+
+```
+  - name: setup valet park on projects folder
+    shell: cd ~/projects && valet park
+```
