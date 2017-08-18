@@ -53,6 +53,10 @@ Create `playbook.yml` with our first instruction:
       state: latest
 ```
 
+Note: We are using the [homebrew]() package manager for OSX.
+
+To find other packages to install, you can use [search-brew](http://searchbrew.com/) or [brew-formulas](http://brewformulas.org/).
+
 #### Step 5 - Install multiple items using homebrew
 
 Using the `with_items` syntax, we can install multiple items with a single command:
@@ -72,7 +76,7 @@ Note: We will also create an `update.sh` script so we can re-run our ansible pla
 
 #### Step 6 - Install apps using homebrew cask
 
-Some homebrew items are installed using "casks":
+Some homebrew items are installed using [casks](https://caskroom.github.io/):
 
 ```
   - name: install apps via homebrew cask
@@ -80,6 +84,8 @@ Some homebrew items are installed using "casks":
       name: iterm2
       state: installed
 ```
+
+Note: use the [search](https://caskroom.github.io/search) to discover other apps that can be installed with homebrew casks.
 
 #### Step 7 - Install homebrew taps
 
@@ -178,6 +184,8 @@ Note: run homebrew_tap before homebrew because "php71" comes from the "homebrew-
 ```
 
 #### Step 11 - Install laravel valet
+
+We will use [laravel/valet](https://laravel.com/docs/5.4/valet) to proxy our local nginx and serve all requests for "*.dev" sites (eg. blog.dev, mysite.dev, project.dev).
 
 ```
   - name: install laravel/valet
