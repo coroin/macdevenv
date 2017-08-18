@@ -13,3 +13,7 @@ We will create a shell script named `install.sh`.
 `sudo easy_install pip`
 
 `sudo pip install ansible`
+
+#### Step 3 - Install homebrew
+
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
