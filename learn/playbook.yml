@@ -80,3 +80,6 @@
 
   - name: setup valet park on projects folder
     shell: cd ~/projects && valet park
+
+  - name: create new laravel project
+    shell: cd ~/projects && laravel new blog

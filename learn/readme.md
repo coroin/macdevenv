@@ -199,3 +199,10 @@ Let laravel valet monitor this folder:
   - name: setup valet park on projects folder
     shell: cd ~/projects && valet park
 ```
+
+#### Step 13 - Create new laravel project
+
+```
+  - name: create new laravel project
+    shell: cd ~/projects && laravel new blog
+```
