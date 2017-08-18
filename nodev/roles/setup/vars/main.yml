@@ -2,20 +2,10 @@
 
 homebrew_apps:
   - ansible
-  # - bash-git-prompt
-  # - coreutils
-  # - curl
-  # - findutils
   # - git
-  # - gnu-sed
   - gpg
-  # - httpie
-  # - mariadb
   - mas
-  # - mcrypt
   # - openssl
-  # - php71
-  # - tree
   # - wget
 
 homebrew_casks:
@@ -26,16 +16,14 @@ homebrew_casks:
   - iterm2
   - keepassxc
   # - mattermost
-  # - postman
   - spotify
-  # - sequel-pro
   # - sublime-text
   # - vagrant
   - virtualbox
   - zoomus
 
 # homebrew_taps:
-#   - homebrew/homebrew-php
+#  - homebrew/homebrew-core
 
 macdock_apps:
   - Launchpad.app
@@ -43,8 +31,6 @@ macdock_apps:
   # - Firefox.app
   - Safari.app
   # - Mattermost.app
-  # - Postman.app
-  # - Sequel Pro.app
   # - Sublime Text.app
   # - iTerm.app
   # - VirtualBox.app

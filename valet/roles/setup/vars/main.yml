@@ -30,6 +30,7 @@ homebrew_casks:
   # - postman
   # - spotify
   # - sequel-pro
+  # - sourcetree
   - sublime-text
   # - vagrant
   # - virtualbox
