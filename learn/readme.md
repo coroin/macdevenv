@@ -52,3 +52,20 @@ Create `playbook.yml` with our first instruction:
       name: git
       state: latest
 ```
+
+#### Step 5 - Install multiple items using homebrew
+
+Using the `with_items` syntax, we can install multiple items with a single command:
+
+```
+  - name: install apps via hombrew
+    homebrew:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      - git
+      - openssl
+      - wget
+```
+
+Note: We will also create an `update.sh` script so we can re-run our ansible playbook.

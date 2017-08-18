@@ -5,5 +5,9 @@
   tasks:
   - name: install apps via hombrew
     homebrew:
-      name: git
+      name: "{{ item }}"
       state: latest
+    with_items:
+      - git
+      - openssl
+      - wget
