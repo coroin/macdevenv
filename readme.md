@@ -10,11 +10,11 @@ This repo contains three options:
 
 #### Setup and Install
 
-0. Clone this repository:
+0) Clone this repository:
 
 `git clone https://github.com/coroin/macdevenv.git`
 
-1. Copy these files to a local folder:
+1) Copy these files to a local folder:
 
 `sh /PATH/TO/REPO/setup.sh`
 
@@ -28,7 +28,7 @@ If you cloned the repo to the Downloads folder, the command would be:
 
 The script will create the folder `~/.provision` and copy files there.
 
-2. Change to the provision directory and then the selected option:
+2) Change to the provision directory and then the selected option:
 
 `cd ~/.provision/OPTION`
 
@@ -42,14 +42,14 @@ If you want to run the *nodev* install:
 
 Note: Alternatively, use the graphical tool Finder.
 
-3.  Modify selected packages/apps:
+3)  Modify selected packages/apps:
 
 Make changes to the `vars/main.yml` file located in the `roles/setup` folder and save the file.
 
-4. Run the `install.sh` script for begin installing:
+4) Run the `install.sh` script for begin installing:
 
 `sh install.sh`
 
-5. Repeat step 3 as needed and then re-run the playbook:
+5) Repeat step 3 as needed and then re-run the playbook:
 
 `sh update.sh`
