@@ -176,3 +176,10 @@ Note: run homebrew_tap before homebrew because "php71" comes from the "homebrew-
       - laravel/installer
       - laravel/valet
 ```
+
+#### Step 11 - Install laravel valet
+
+```
+  - name: install laravel/valet
+    command: valet install
+```

@@ -71,3 +71,6 @@
     with_items:
       - laravel/installer
       - laravel/valet
+
+  - name: install laravel/valet
+    command: valet install
