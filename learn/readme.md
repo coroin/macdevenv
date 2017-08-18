@@ -206,3 +206,33 @@ Let laravel valet monitor this folder:
   - name: create new laravel project
     shell: cd ~/projects && laravel new blog
 ```
+
+#### Step 14 - Setup laravel project
+
+Create database and user:
+
+```
+  - name: create database and user
+    command: mysql -uroot -e "create database if not exists homestead; grant all on homestead.* to 'homestead'@'localhost' identified by 'secret'; flush privileges;"
+```
+
+Note: to ensure mariadb is started, add this step before valet install:
+
+```
+  - name: start mariadb (using brew)
+    command: brew services start mariadb
+```
+
+Run artisan commands:
+
+```
+  - name: run artisan commands
+    shell: cd ~/projects/blog && php artisan key:generate && php artisan make:auth && php artisan migrate --seed
+ ```
+
+Open a web browser and navigate to:
+- http://blog.dev
+
+Success!
+
+Note: Any additional sites you create in the `~/projects` folder will automatically be served by laravel/valet. For more information check out the [documentation](https://laravel.com/docs/5.4/valet).
