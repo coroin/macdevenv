@@ -9,3 +9,6 @@ sudo pip install ansible
 
 # install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# ugly hack (find way to source .bash_profile after composer install)
+export PATH="$PATH:$HOME/.composer/vendor/bin"

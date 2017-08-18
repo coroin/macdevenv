@@ -17,3 +17,7 @@ We will create a shell script named `install.sh`.
 #### Step 3 - Install homebrew
 
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+#### Ugly hack to add composer to PATH
+
+`export PATH="$PATH:$HOME/.composer/vendor/bin"`
