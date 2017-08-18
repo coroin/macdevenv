@@ -2,7 +2,7 @@
 
 This script automates the install of a Mac localdev environment using [ansible](https://www.ansible.com/) to setup [laravel/valet](https://laravel.com/docs/5.4/valet).
 
-This is similar to the [learn](/learn/readme.md) single-file playbook with a more traditional ansible project structure:
+This is similar to the [learn](learn/readme.md) single-file playbook with a more traditional ansible project structure:
 
 ```
 valet/
