@@ -1,0 +1,10 @@
+---
+
+- name: homebrew apps
+  include: homebrew.yml
+
+- name: apple store apps
+  include: mas.yml
+
+- name: macdock
+  include: macdock.yml
