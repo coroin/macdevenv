@@ -93,3 +93,42 @@ Homebrew formulae can also come from external sources called taps:
     with_items:
       - homebrew/homebrew-php
 ```
+
+#### Step 8 - Install all homebrew items for localdev
+
+Here is the full list of items to install from homebrew, including php7 (via homebrew tap):
+
+```
+  - name: install hombrew taps
+    homebrew_tap:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - homebrew/homebrew-php
+
+  - name: install apps via hombrew
+    homebrew:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      - bash-git-prompt
+      - coreutils
+      - curl
+      - findutils
+      - git
+      - mariadb
+      - openssl
+      - php71
+      - wget
+
+  - name: install apps via homebrew cask
+    homebrew_cask:
+      name: "{{ item }}"
+      state: installed
+    with_items:
+      - google-chrome
+      - iterm2
+      - sublime-text
+```
+
+Note: run homebrew_tap before homebrew because "php71" comes from the "homebrew-php" tap.

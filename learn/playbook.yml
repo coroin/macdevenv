@@ -3,23 +3,34 @@
 - hosts: mac
 
   tasks:
-  - name: install apps via hombrew
-    homebrew:
-      name: "{{ item }}"
-      state: latest
-    with_items:
-      - git
-      - openssl
-      - wget
-
-    - name: install apps via homebrew cask
-    homebrew_cask:
-      name: iterm2
-      state: installed
-
+  ## homebrew
   - name: install hombrew taps
     homebrew_tap:
       name: "{{ item }}"
       state: present
     with_items:
       - homebrew/homebrew-php
+
+  - name: install apps via hombrew
+    homebrew:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      - bash-git-prompt
+      - coreutils
+      - curl
+      - findutils
+      - git
+      - mariadb
+      - openssl
+      - php71
+      - wget
+
+  - name: install apps via homebrew cask
+    homebrew_cask:
+      name: "{{ item }}"
+      state: installed
+    with_items:
+      - google-chrome
+      - iterm2
+      - sublime-text
