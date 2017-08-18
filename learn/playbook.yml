@@ -16,3 +16,10 @@
     homebrew_cask:
       name: iterm2
       state: installed
+
+  - name: install hombrew taps
+    homebrew_tap:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - homebrew/homebrew-php

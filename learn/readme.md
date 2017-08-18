@@ -80,3 +80,16 @@ Some homebrew items are installed using "casks":
       name: iterm2
       state: installed
 ```
+
+#### Step 7 - Install homebrew taps
+
+Homebrew formulae can also come from external sources called taps:
+
+```
+  - name: install hombrew taps
+    homebrew_tap:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - homebrew/homebrew-php
+```
