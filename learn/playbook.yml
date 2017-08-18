@@ -1,0 +1,9 @@
+---
+
+- hosts: mac
+
+  tasks:
+  - name: install apps via hombrew
+    homebrew:
+      name: git
+      state: latest

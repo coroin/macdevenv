@@ -21,3 +21,34 @@ We will create a shell script named `install.sh`.
 #### Ugly hack to add composer to PATH
 
 `export PATH="$PATH:$HOME/.composer/vendor/bin"`
+
+#### Step 4 - Create ansible playbook
+
+This is the command to add to our install script:
+
+`ansible-playbook -i ../hosts playbook.yml -vv`
+
+It references the `hosts` file to tell ansible we are provisioning the localhost:
+
+```
+[mac]
+localhost ansible_connection=local
+```
+
+Note: the `hosts` file is located one directory up in this repo because it is shared by all playbooks/scripts.
+
+---
+
+Create `playbook.yml` with our first instruction:
+
+```
+---
+
+- hosts: mac
+
+  tasks:
+  - name: install apps via hombrew
+    homebrew:
+      name: git
+      state: latest
+```
