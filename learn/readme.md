@@ -7,3 +7,9 @@ Learn [ansible](https://www.ansible.com/) by automating the setup/config of a ma
 `xcode-select --install`
 
 We will create a shell script named `install.sh`.
+
+#### Step 2 - Install ansible using python-pip
+
+`sudo easy_install pip`
+
+`sudo pip install ansible`
