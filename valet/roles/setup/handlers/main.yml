@@ -1,0 +1,6 @@
+---
+## HT: https://github.com/danbohea/ansible-role-dock-items/blob/master/handlers/main.yml
+
+- name: killall Dock
+  command: killall Dock
+  ignore_errors: yes

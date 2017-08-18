@@ -1,0 +1,25 @@
+---
+
+- name: start mariadb (using brew)
+  command: brew services start mariadb
+
+- name: install laravel/valet
+  command: valet install
+
+- name: create projects folder
+  shell: mkdir -p ~/projects
+
+- name: setup valet park on projects folder
+  shell: cd ~/projects && valet park
+
+- name: create new laravel project
+  shell: cd ~/projects && laravel new blog
+
+- name: create homestead database
+  command: mysql -uroot -e "create database if not exists homestead;"
+
+- name: create mysql user homestead
+  command: mysql -uroot -e "grant all on homestead.* to 'homestead'@'localhost' identified by 'secret'; flush privileges;"
+
+- name: run artisan commands
+  shell: cd ~/projects/blog && php artisan key:generate && php artisan make:auth && php artisan migrate --seed

@@ -1,0 +1,19 @@
+---
+
+- name: homebrew apps
+  include: homebrew.yml
+
+- name: composer
+  include: composer.yml
+
+- name: packages (composer, npm, python, ruby)
+  include: packages.yml
+
+# - name: apple store apps
+#   include: mas.yml
+
+- name: valet
+  include: valet.yml
+
+# - name: macdock
+#   include: macdock.yml
