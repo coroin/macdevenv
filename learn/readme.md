@@ -163,3 +163,16 @@ Note: run homebrew_tap before homebrew because "php71" comes from the "homebrew-
       create: yes
       line: 'export PATH="$PATH:$HOME/.composer/vendor/bin"'
 ```
+
+#### Step 10 - Install laravel global composer packages
+
+```
+  - name: install global Composer packages.
+    composer:
+      command: "{{ (item.state | default('present') == 'absent') | ternary('remove', 'require') }}"
+      arguments: "{{ item.name | default(item) }} {{ item.version | default('@stable') }}"
+      working_dir: "{{ lookup('env', 'COMPOSER_HOME') | default('~/.composer', true) }}"
+    with_items:
+      - laravel/installer
+      - laravel/valet
+```

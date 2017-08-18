@@ -62,3 +62,12 @@
       path: '$HOME/.bash_profile'
       create: yes
       line: 'export PATH="$PATH:$HOME/.composer/vendor/bin"'
+
+  - name: install global composer packages
+    composer:
+      command: "{{ (item.state | default('present') == 'absent') | ternary('remove', 'require') }}"
+      arguments: "{{ item.name | default(item) }} {{ item.version | default('@stable') }}"
+      working_dir: "{{ lookup('env', 'COMPOSER_HOME') | default('~/.composer', true) }}"
+    with_items:
+      - laravel/installer
+      - laravel/valet
