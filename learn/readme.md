@@ -132,3 +132,34 @@ Here is the full list of items to install from homebrew, including php7 (via hom
 ```
 
 Note: run homebrew_tap before homebrew because "php71" comes from the "homebrew-php" tap.
+
+#### Step 9 - Install composer
+
+```
+  - name: download composer
+    get_url:
+      url: https://getcomposer.org/installer
+      dest: /tmp/installer
+
+  - name: install composer
+    shell: cat /tmp/installer | php -- --install-dir=/usr/local/bin
+    args:
+      creates: /usr/local/bin/composer
+
+  - name: rename composer.phar to composer
+    shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer
+    args:
+      creates: /usr/local/bin/composer
+
+  - name: make composer executable
+    file:
+      path: /usr/local/bin/composer
+      mode: a+x
+      state: file
+
+  - name: add composer bin to path
+    lineinfile:
+      path: '$HOME/.bash_profile'
+      create: yes
+      line: 'export PATH="$PATH:$HOME/.composer/vendor/bin"'
+```
