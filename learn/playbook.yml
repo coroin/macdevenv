@@ -11,3 +11,8 @@
       - git
       - openssl
       - wget
+
+    - name: install apps via homebrew cask
+    homebrew_cask:
+      name: iterm2
+      state: installed

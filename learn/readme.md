@@ -69,3 +69,14 @@ Using the `with_items` syntax, we can install multiple items with a single comma
 ```
 
 Note: We will also create an `update.sh` script so we can re-run our ansible playbook.
+
+#### Step 6 - Install apps using homebrew cask
+
+Some homebrew items are installed using "casks":
+
+```
+  - name: install apps via homebrew cask
+    homebrew_cask:
+      name: iterm2
+      state: installed
+```
