@@ -72,7 +72,8 @@ packages_composer:
   - laravel/installer
   - laravel/valet
 
-packages_npm: []
+packages_npm:
+  - yarn
 
 packages_pip: []
 
