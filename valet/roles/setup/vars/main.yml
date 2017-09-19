@@ -21,6 +21,7 @@ homebrew_apps:
 
 homebrew_casks:
   - alfred
+  - atom
   # - dash
   # - firefox
   - google-chrome
@@ -31,7 +32,7 @@ homebrew_casks:
   # - spotify
   # - sequel-pro
   # - sourcetree
-  - sublime-text
+  # - sublime-text
   # - vagrant
   # - virtualbox
   # - zoomus
@@ -42,6 +43,7 @@ homebrew_taps:
 macdock_apps:
   - Launchpad.app
   - Google Chrome.app
+  - Atom.app
   # - Firefox.app
   # - Safari.app
   # - KeePassXC
@@ -50,7 +52,7 @@ macdock_apps:
   # - Numbers.app
   # - Pages.app
   # - Keynote.app
-  - Sublime Text.app
+  # - Sublime Text.app
   # - VirtualBox.app
   # - zoom.us.app
   # - Mattermost.app
