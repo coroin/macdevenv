@@ -15,10 +15,7 @@ homebrew_casks:
   - google-chrome
   - iterm2
   - keepassxc
-  # - mattermost
   - spotify
-  # - sublime-text
-  # - vagrant
   - virtualbox
   - zoomus
 
@@ -30,16 +27,14 @@ macdock_apps:
   - Google Chrome.app
   # - Firefox.app
   - Safari.app
-  # - Mattermost.app
-  # - Sublime Text.app
-  # - iTerm.app
-  # - VirtualBox.app
   - Numbers.app
   - Pages.app
   - Keynote.app
   - zoom.us.app
   - KeePassXC
   - Spotify.app
+  # - iTerm.app
+  # - VirtualBox.app
 
 mas_email: "APPLEID_EMAIL"
 mas_password: "APPLEID_PASSWORD"
