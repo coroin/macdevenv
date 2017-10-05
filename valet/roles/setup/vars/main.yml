@@ -21,21 +21,22 @@ homebrew_apps:
 
 homebrew_casks:
   - alfred
-  - atom
+  # - atom
   # - dash
   # - firefox
   - google-chrome
   - iterm2
   # - keepassxc
-  # - mattermost
   # - postman
   # - spotify
   # - sequel-pro
+  - slack
   # - sourcetree
-  # - sublime-text
+  - sublime-text
   # - vagrant
   # - virtualbox
-  # - zoomus
+  # - vlc
+  - zoomus
 
 homebrew_taps:
   - homebrew/homebrew-php
@@ -43,21 +44,22 @@ homebrew_taps:
 macdock_apps:
   - Launchpad.app
   - Google Chrome.app
-  - Atom.app
   # - Firefox.app
   # - Safari.app
-  # - KeePassXC
+  # - Atom.app
+  - Sublime Text.app
+  - iTerm.app
+  - Slack.app
+  - zoom.us.app
   # - Postman.app
   # - Sequel Pro.app
-  # - Numbers.app
-  # - Pages.app
-  # - Keynote.app
-  # - Sublime Text.app
   # - VirtualBox.app
-  # - zoom.us.app
-  # - Mattermost.app
+  # - Keynote.app
+  - Numbers.app
+  - Pages.app
   # - Spotify.app
-  - iTerm.app
+  # - KeePassXC
+  # - VLC.app
 
 mas_email: "APPLEID_EMAIL"
 mas_password: "APPLEID_PASSWORD"
