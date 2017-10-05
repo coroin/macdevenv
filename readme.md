@@ -53,3 +53,12 @@ Make changes to the `vars/main.yml` file located in the `roles/setup` folder and
 5) Repeat step 3 as needed and then re-run the playbook:
 
 `sh update.sh`
+
+#### TODO
+
+- [dotfiles](https://code.tutsplus.com/tutorials/setting-up-a-mac-dev-machine-from-zero-to-hero-with-dotfiles--net-35449)
+- [fira-code](https://github.com/tonsky/FiraCode)
+- [material-theme](https://github.com/equinusocio/material-theme)
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+- [sublime-phpunit](https://github.com/adamwathan/sublime-phpunit)
