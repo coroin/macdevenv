@@ -56,6 +56,13 @@ Make changes to the `vars/main.yml` file located in the `roles/setup` folder and
 
 #### TODO
 
+Automate homebrew updates:
+
+```
+brew update && brew upgrade && brew cask reinstall `brew cask outdated`
+```
+
+Incorporate the following:
 - [dotfiles](https://code.tutsplus.com/tutorials/setting-up-a-mac-dev-machine-from-zero-to-hero-with-dotfiles--net-35449)
 - [fira-code](https://github.com/tonsky/FiraCode)
 - [material-theme](https://github.com/equinusocio/material-theme)
