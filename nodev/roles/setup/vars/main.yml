@@ -12,6 +12,7 @@ homebrew_casks:
   - alfred
   # - dash
   # - firefox
+  # - gimp
   - google-chrome
   - iterm2
   - keepassxc
@@ -35,6 +36,7 @@ macdock_apps:
   - Spotify.app
   # - iTerm.app
   # - VirtualBox.app
+  # - GIMP.app
 
 mas_email: "APPLEID_EMAIL"
 mas_password: "APPLEID_PASSWORD"

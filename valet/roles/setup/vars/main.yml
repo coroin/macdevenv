@@ -24,6 +24,7 @@ homebrew_casks:
   # - atom
   # - dash
   # - firefox
+  # - gimp
   - google-chrome
   - iterm2
   # - keepassxc
@@ -54,6 +55,7 @@ macdock_apps:
   # - Postman.app
   # - Sequel Pro.app
   # - VirtualBox.app
+  # - GIMP.app
   # - Keynote.app
   - Numbers.app
   - Pages.app
