@@ -49,7 +49,7 @@
 
   ## laravel
   - name: laravel installer
-    shell: composer global install laravel/installer
+    shell: composer global require laravel/installer
 
   - name: create projects folder
     shell: mkdir -p ~/projects
