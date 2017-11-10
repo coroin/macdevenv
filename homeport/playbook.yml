@@ -1,0 +1,69 @@
+---
+
+- hosts: mac
+
+  tasks:
+  ## homebrew
+  - name: install hombrew taps
+    homebrew_tap:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - homebrew/homebrew-php
+
+  - name: install apps via hombrew
+    homebrew:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      # - ansible
+      - bash-git-prompt
+      - composer
+      - coreutils
+      - curl
+      - findutils
+      - git
+      - gnu-sed
+      - gpg
+      # - httpie
+      # - mariadb
+      - mcrypt
+      - openssl
+      - php71
+      - tree
+      - wget
+
+  - name: install apps via homebrew cask
+    homebrew_cask:
+      name: "{{ item }}"
+      state: installed
+    with_items:
+      # - alfred
+      - atom
+      - google-chrome
+      - iterm2
+      # - slack
+      - vagrant
+      - virtualbox
+      # - zoomus
+
+  ## laravel
+  - name: laravel installer
+    shell: composer global install laravel/installer
+
+  - name: create projects folder
+    shell: mkdir -p ~/projects
+
+  - name: create new laravel project
+    shell: cd ~/projects && laravel new blog
+
+  ## homeport
+  # Vagrantfile
+  # vagrant up
+  # vagrant ssh "./homeport up -d"
+
+  # - name: create database and user
+  #   command: mysql -uroot -e "create database if not exists homestead; grant all on homestead.* to 'homestead'@'localhost' identified by 'secret'; flush privileges;"
+  #
+  # - name: run artisan commands
+  #   shell: cd ~/projects/blog && php artisan key:generate && php artisan make:auth && php artisan migrate --seed

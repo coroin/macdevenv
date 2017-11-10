@@ -2,8 +2,9 @@
 
 #### Playbook Options:
 
-This repo contains three options:
+This repo contains four options:
 
+- `homeport` : playbook for minimal devenv using Vagrant/VirtualBox/Docker [readme](homeport/readme.md)
 - `learn` : playbook created by following [learn](learn/readme.md) steps
 - `nodev` : productivity/creativity apps without development tools [readme](nodev/readme.md)
 - `valet` : using laravel/valet and locally installed nginx and mariadb [reaadme](valet/readme.md)
@@ -31,6 +32,10 @@ The script will create the folder `~/.provision` and copy files there.
 2) Change to the provision directory and then the selected option:
 
 `cd ~/.provision/OPTION`
+
+If you want to run the *homeport* install:
+
+`cd ~/.provision/homeport`
 
 If you want to run the *valet* install:
 
