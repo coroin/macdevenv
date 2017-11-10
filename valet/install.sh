@@ -16,12 +16,15 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # run playbook
 ansible-playbook -i ../hosts playbook.yml -vv
 
-## TODO: put this in ansible
 cat >> ~/.bash_profile <<EOF
+# bash git prompt
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
+
+# composer path
+export PATH="$PATH:$HOME/.composer/vendor/bin
 EOF
 
 # clean up
